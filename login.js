@@ -2,8 +2,8 @@ function login() {
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
 
-    // Demo credentials
-    if (username === "admin" && password === "1234") {
+  
+    if (username === "datadream" && password === "1234") {
         localStorage.setItem("loggedIn", "true");
         window.location.href = "index.html"; // expense tracker
     } else {
@@ -11,3 +11,4 @@ function login() {
             "Invalid username or password";
     }
 }
+
