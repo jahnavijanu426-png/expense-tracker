@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f4f5;
+}
+
+.container {
+    margin: 20px;
+}
+
+input, select, button {
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+canvas {
+    max-width: 500px;
+    margin: auto;
+}
+@media (max-width: 600px) {
+    input, select, button {
+        width: 90%;
+        margin: 10px auto;
+        display: block;
+    }
+
+    canvas {
+        width: 100% !important;
+    }
+}
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    if (localStorage.getItem("loggedIn") !== "true") {
+        window.location.href = "login.html";
+    }
+</script>
+
+<body>
+
+    <h2>Smart Expense Tracker</h2>
+    <p>Track and manage your daily expenses easily</p>
+
+    <h3 id="total">Total Expense: ₹0</h3>
+    <input type="date" id="date">
+
+
+    <div class="container">
+        <input type="number" id="amount" placeholder="Enter amount">
+
+        <select id="category">
+            <option value="Food">Food</option>
+            <option value="Travel">Travel</option>
+            <option value="Rent">Rent</option>
+        </select>
+
+        <button onclick="addExpense()">Add Expense</button>
+    </div>
+
+    <canvas id="expenseChart"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
+<h3>Expense History</h3>
+<ul id="expenseList"></ul>
+<button onclick="logout()">Logout</button>
+
+<script>
+function logout() {
+    localStorage.removeItem("loggedIn");
+    window.location.href = "login.html";
+}
+</script>
